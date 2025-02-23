@@ -1,89 +1,163 @@
+/* Reset & Basic Styles */
 body {
-    font-family: Arial, sans-serif; /* 전체 페이지의 폰트 스타일 지정 */
+    font-family: 'Arial', sans-serif; /* 또는 원하는 폰트 */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* 배경색 설정 */
-    text-align: center; /* 제목을 중앙 정렬 */
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
 }
 
-h1 {
-    color: #333; /* 제목의 색상 지정 */
-    text-align: left; /* 제목을 중앙 정렬 */
+h1, h2, h3 {
+    color: #445;
 }
 
-h2 {
-    color: #07289f; /* 제목의 색상 지정 */
-    text-align: left; /* 제목을 중앙 정렬 */
-}
-
-h3 {
-    color: #2d0369; /* 제목의 색상 지정 */
-    text-align: left; /* 제목을 중앙 정렬 */
-}
-
-p {
-    font-size: 16px; /* 문단의 폰트 크기 지정 */
-    color: #666; /* 문단의 색상 지정 */
-    line-height: 1.2; /* 문단의 줄 간격 지정 */
-    margin: 10px; /* 문단 주위 여백 지정 */
-    text-align: left; /* 제목을 중앙 정렬 */
-}
-
-a {
-    color: #000; /* 링크의 색상 지정 */
-    text-decoration: none; /* 링크의 밑줄 제거 */
-    text-align: center; /* 제목을 중앙 정렬 */
-}
-
-a:hover {
-    color: blue; /* 마우스 오버 시 링크 색상 변경 */
-    text-align: center; /* 제목을 중앙 정렬 */
-}
-
-ul {
-    list-style: none; /* 목록의 스타일 없애기 */
-    padding: 0;
-    text-align: left; /* 제목을 중앙 정렬 */
-}
-
-li {
-    background-color: #fff; /* 목록 항목 배경색 지정 */
-    margin-bottom: 5px; /* 목록 항목 사이의 여백 지정 */
-    padding: 5px; /* 목록 항목 내부 여백 지정 */
-    border: 1px solid #ddd; /* 목록 항목 테두리 지정 */
-    text-align: left; /* 제목을 중앙 정렬 */
-}
-
-
-img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 320px;
-}
-
-div {
-    margin: 20px; /* div 주위 여백 지정 */
-    padding: 20px; /* div 내부 여백 지정 */
-    background-color: yellow; /* 배경색 지정 */
-    border: 1px solid #ddd; /* 테두리 지정 */
-    text-align: center; /* 제목을 중앙 정렬 */
-}
-
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px 0;
-    background-color: #4c81af;
-    color: white;
+/* Header Styles */
+header {
+    background-color: #6a89cc; /* 연한 파스텔 톤 */
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
+    border-bottom: 3px solid #535c68;
+}
+
+header h1 {
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
+}
+header p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+
+/* Button Styles */
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* 버튼 높이 맞춤 */
+    flex-wrap: wrap; /* 화면이 좁아지면 줄바꿈 */
+    gap: 20px; /* 버튼 사이 간격 */
+    padding: 20px;
+}
+
+.book-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    color: #34495e;
+    border: 2px solid #34495e;
+    padding: 15px;
+    border-radius: 10px;
     text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px; /* 버튼 너비 고정 */
+    height: 250px; /* 버튼의 높이 설정 */
+}
+
+.book-button:hover {
+    background-color: #34495e;
+    color: #fff;
+    transform: translateY(-3px); /* 호버 시 살짝 위로 이동 */
+}
+
+.book-button img {
+    width: 100px; /* 이미지 크기 조정 */
+    height: 150px;
+    margin-bottom: 10px;
     border-radius: 5px;
-    font-size: 16px;
+    object-fit: cover; /* 이미지가 비율 유지하며 채우도록 */
 }
 
-.button:hover {
-    background-color: #eeee08;
+.book-button span {
+    font-size: 1rem;
+    text-align: center;
+    flex-grow: 1; /* 남은 공간 채우기 */
+    display: flex;
+    align-items: center; /* 텍스트 수직 중앙 정렬 */
 }
 
+
+
+/* Book Detail Page Styles */
+.back-button { /* 목록으로 버튼 */
+    display: inline-block;
+    background-color: #7f8c8d;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #95a5a6;
+}
+
+
+.book-info {
+    display: flex;
+    flex-direction: row; /* 가로 배치 */
+    align-items: flex-start; /* 위쪽 정렬 */
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+    width: 150px; /* 표지 이미지 크기 */
+    height: 225px;
+    margin-right: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.book-details {
+    flex: 1; /* 남은 공간 채우기 */
+}
+
+.book-details h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+.book-details p{
+    margin-top: 5px;
+}
+
+.review, .ai-analysis {
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.review h2, .ai-analysis h2{
+    border-bottom: 2px solid #6a89cc;
+    padding-bottom: 5px;
+}
+
+
+.review-image {
+    max-width: 100%; /* 이미지가 섹션 너비 초과 X */
+    height: auto;
+    display: block; /* 이미지 아래 여백 제거 */
+    margin: 20px auto; /* 가운데 정렬 */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #34495e;
+    color: #fff;
+    border-top: 3px solid #2c3e50;
+}
